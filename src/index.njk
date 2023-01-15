@@ -1,0 +1,12 @@
+---
+layout: 'base.njk'
+---
+
+<div class="post-card">
+    <h1 class="text-center">{{ meta.siteName }}</h1>
+    
+    <p class="text-center">{{meta.siteDescription}}</p>
+</div>
+
+{% set postList = collections.blog %}
+{% include 'postList.njk' %}

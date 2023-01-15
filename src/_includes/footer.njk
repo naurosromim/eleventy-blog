@@ -1,0 +1,8 @@
+<footer>
+    <h2>Tags</h2>
+    {% for tag in collections.tagList %}
+    {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+    <a href="{{ tagUrl | url }}">#{{ tag }}</a>&ensp;&ensp;
+    {% endfor %}
+    <p>&copy;romim 2022-</p>
+</footer>

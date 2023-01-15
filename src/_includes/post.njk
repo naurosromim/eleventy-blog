@@ -1,0 +1,24 @@
+---
+layout: 'base.njk'
+---
+
+<h1>{{ title }}</h1>
+
+<p>{{ date | postDate }}</p>
+
+<p>{{ summary }}</p>
+
+<p>
+    {% for tag in tags | filterTagList %}
+    {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+    <a href="{{ tagUrl | url }}">#{{ tag }}</a>&ensp;
+    {% endfor %}
+</p>
+
+<img src="{{ img }}" alt="{{ img-alt }}">
+
+
+<article>
+    {{ content | safe }}
+</article>
+
